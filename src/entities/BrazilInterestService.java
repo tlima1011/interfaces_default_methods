@@ -15,9 +15,6 @@ public class BrazilInterestService {
 	public Double getInterestRate() {
 		return interestRate;
 	}
-	public void setInterestRate(Double interestRate) {
-		this.interestRate = interestRate;
-	} 
 	//Methods 
 	public double payment(double amount, int months) {
 		if(months < 1) {
