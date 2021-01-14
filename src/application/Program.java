@@ -3,8 +3,9 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.BrazilInterestService;
-import entities.UsaInterestService;
+import model.entities.BrazilInterestService;
+import model.entities.UsaInterestService;
+import model.interfaces.InterestService;
 
 public class Program {
 
@@ -18,9 +19,9 @@ public class Program {
 		System.out.print("Months: "); //3
 		int months = sc.nextInt(); 
 		
-		UsaInterestService bs = new UsaInterestService(1.0); 
+		InterestService is = new BrazilInterestService(2.0); 
 		
-		double payment = bs.payment(amount, months);
+		double payment = is.payment(amount, months);
 		System.out.println("Payment after 3 months:");
 		System.out.println(String.format("%.2f", payment));
 				
